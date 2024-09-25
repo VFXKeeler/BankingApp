@@ -1,9 +1,9 @@
 package jkeeler.entity;
 
 public class BankAccount {
-    int bankAccountId = 0;
-    double balance = 0;
-    int userId = 0;
+    private int bankAccountId = 0;
+    private double balance = 0;
+    private int userId = 0;
     public BankAccount(){
         super();
 
@@ -11,7 +11,7 @@ public class BankAccount {
     public BankAccount(double balance, int userId){
         super();
         this.balance = balance;
-        this.userId = userId;
+        this.setUserId(userId);
     }
     public BankAccount(double balance){
         super();
@@ -20,19 +20,19 @@ public class BankAccount {
     public int getBankAccountId(){
         return this.bankAccountId;
     }
-    public setBankAccountId(int bankAccountId){
+    public void setBankAccountId(int bankAccountId){
         this.bankAccountId = bankAccountId;
     }
     public double getBalance(){
         return this.balance;
     }
-    public setBalance(double balance){
+    public void setBalance(double balance){
         this.balance = balance;
     }
     public int userId(){
         return userId;
     }
-    public setUserId(int userId)
+    public void setUserId(int userId)
     {
         this.userId = userId;
     }
