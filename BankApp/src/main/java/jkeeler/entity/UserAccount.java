@@ -1,5 +1,6 @@
 package jkeeler.entity;
-
+//@Entity
+//@Table(name = "UserAccount")
 public class UserAccount {
 
     private int userId = 0;
