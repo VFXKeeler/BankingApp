@@ -4,8 +4,16 @@ package jkeeler.Service;
 import jkeeler.entity.UserAccount;
 import jkeeler.Service.UserAccountService;
 
+import jkeeler.entity.UserAccountRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class UserAccountServiceImpl implements UserAccountService {
 
+    //@Autowired
+    private UserAccountRepository repository;
     @Override
     public UserAccount createAccount(String username, String password) {
         UserAccount output = new UserAccount();

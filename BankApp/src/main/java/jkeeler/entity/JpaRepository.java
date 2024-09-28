@@ -1,7 +1,6 @@
-package jkeeler.Repository;
-//import org.springframework.data.jpa.repository.JpaRepository;
-import jkeeler.entity.UserAccount;
+package jkeeler.entity;
 
-public interface Repository {
-    UserAccount findByUsername(String username);
+
+public class JpaRepository<T, Long> {
+   
 }
