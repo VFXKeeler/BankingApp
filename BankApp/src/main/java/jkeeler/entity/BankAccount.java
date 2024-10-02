@@ -1,8 +1,17 @@
 package jkeeler.entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "Transaction")
 public class BankAccount {
+    @Id
     private int bankAccountId = 0;
+    @Column(name = "Balance")
     private double balance = 0;
+    @Column(name = "UserId")
     private int userId = 0;
     public BankAccount(){
         super();

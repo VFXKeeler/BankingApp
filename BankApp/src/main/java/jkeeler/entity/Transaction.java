@@ -1,10 +1,20 @@
 package jkeeler.entity;
 
-public class Transaction {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "Transaction")
+public class Transaction {
+    @Id
     private int transactionId = 0;
+    @Column(name = "Date")
     private String date = "";
+    @Column(name = "Amount")
     private double amount = 0;
+    @Column(name = "BankId")
     private int bankId = 0;
 
     public Transaction(){

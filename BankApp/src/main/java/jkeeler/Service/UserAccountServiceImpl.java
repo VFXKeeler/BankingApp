@@ -3,23 +3,22 @@ package jkeeler.Service;
 
 import jkeeler.entity.UserAccount;
 import jkeeler.Service.UserAccountService;
+import jkeeler.RelationMapping.JPARepository;
 
-import jkeeler.entity.UserAccountRepository;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserAccountServiceImpl implements UserAccountService {
-
-    //@Autowired
-    private UserAccountRepository repository;
+    @Autowired
+    private JPARepository<UserAccount, Long> jPARepository;
+ 
     @Override
-    public UserAccount createAccount(String username, String password) {
-        UserAccount output = new UserAccount();
-        output.setUsername(username);
-        output.setPassword(password);
-        return output; 
+    public UserAccount createAccount(UserAccount userAccount) {
+       System.out.println(userAccount.getUsername());
+        return jPARepository.save(userAccount); 
     }
 
     @Override

@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 @Table(name = "UserAccount")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userID;
     @Column(name = "Username")
     private String username;
