@@ -11,44 +11,44 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/UserAccount")
-public class UserAccountController {
+public class UserAccountRestController {
     @Autowired
-    private UserAccountServiceImpl UserAccountServiceImpl;
+    private UserAccountServiceImpl userAccountServiceImpl;
 
     // Create a new user
     @PostMapping
     public UserAccount createUser(@RequestBody UserAccount user) {
-        return UserAccountServiceImpl.createAccount(user);
+        return userAccountServiceImpl.createAccount(user);
     }
 
     // Get all users
     @GetMapping
     public List<UserAccount> getAllUsers() {
-        return UserAccountServiceImpl.getAllUsers();
+        return userAccountServiceImpl.viewAllUsers();
     }
 
     // Get user by ID
     @GetMapping("/{id}")
     public Optional<UserAccount> getUserById(@PathVariable Long id) {
-        return UserAccountServiceImpl.getUserById(id);
+        return userAccountServiceImpl.getUserById(id);
     }
 
     // Update user by ID
     @PutMapping("/{id}")
     public UserAccount updateUser(@PathVariable Long id, @RequestBody UserAccount userDetails) {
-        return UserAccountServiceImpl.updateUser(id, userDetails);
+        return userAccountServiceImpl.updateUser(id, userDetails);
     }
 
     // Delete all users
     @DeleteMapping
     public String deleteAllUsers() {
-        UserAccountServiceImpl.deleteAllUsers();
+        userAccountServiceImpl.viewAllUsers();
         return "All users have been deleted successfully.";
     }
 
-    // Delete user by ID
+    // Delete user by userAccount
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
-        UserAccountServiceImpl.deleteUser(id);
+    public void deleteUser(@PathVariable UserAccount userAccount) {
+        userAccountServiceImpl.deleteUser(userAccount);
     }
 }

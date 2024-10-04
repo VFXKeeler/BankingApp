@@ -13,7 +13,7 @@ public interface UserAccountService {
 
     // Super Functions
     public List<UserAccount> viewAllUsers();
-    public void deleteAllUser(UserAccount userAccount);
+    public void deleteUser(UserAccount userAccount);
     public UserAccount UpdateUser(UserAccount userAccount);
     public UserAccount makeSuperUser(UserAccount userAccount);
 
