@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BankingSpringApp",
+            "request": "launch",
+            "mainClass": "Test.BankingSpringApp",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "BankingSpringApp",
+            "request": "launch",
+            "mainClass": "jkeeler.BankingSpringApp",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BankingSpringApp<demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "jkeeler.App.BankingSpringApp",
+            "projectName": "demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

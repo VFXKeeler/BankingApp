@@ -1,4 +1,4 @@
-package jkeeler;
+package jkeeler.App;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategy;

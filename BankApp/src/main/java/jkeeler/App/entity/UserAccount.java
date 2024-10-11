@@ -1,4 +1,4 @@
-package jkeeler.entity;
+package jkeeler.App.entity;
 
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
