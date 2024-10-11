@@ -4,8 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "Transaction")
+//@Entity
+//@Table(name = "Transaction")
 public class BankAccount {
     @Id
     private int bankAccountId = 0;

@@ -9,8 +9,8 @@ import jkeeler.entity.UserAccount;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
-@RequestMapping("/UserAccount")
+//@RestController
+//@RequestMapping("/UserAccount")
 public class UserAccountRestController {
     @Autowired
     private UserAccountServiceImpl userAccountServiceImpl;
