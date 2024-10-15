@@ -1,4 +1,4 @@
-package jkeeler.App.entity;
+package jkeeler.App.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

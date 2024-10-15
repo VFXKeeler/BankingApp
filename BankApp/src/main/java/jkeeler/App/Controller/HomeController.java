@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
+
+import jkeeler.App.Entity.UserAccount;
 import jkeeler.App.Service.UserAccountService;
 import jkeeler.App.Service.UserAccountServiceImpl;
-import jkeeler.App.entity.UserAccount;
 
 @Controller
 public class HomeController {

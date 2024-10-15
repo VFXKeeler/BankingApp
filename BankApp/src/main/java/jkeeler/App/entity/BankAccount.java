@@ -1,11 +1,12 @@
-package jkeeler.App.entity;
+package jkeeler.App.Entity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-//@Entity
-//@Table(name = "Transaction")
+@Entity
+@Table(name = "BankAccount")
 public class BankAccount {
     @Id
     private int bankAccountId = 0;
