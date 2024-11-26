@@ -37,6 +37,9 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr th:if="${transactions == null or #list.isEmpty(transactions)}">
+                        <td colspan="4"> No Transaction Available</td>
+                    </tr>
                     <tr th:each="transaction : ${transactions}">
                         <td th:text="${transaction.id}"></td>
                         <td th:text="${transaction.date}"></td>
