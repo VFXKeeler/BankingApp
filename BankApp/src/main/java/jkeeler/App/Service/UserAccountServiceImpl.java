@@ -13,8 +13,8 @@ public class UserAccountServiceImpl implements UserAccountService {
     private UserRepository<UserAccount, Long> userRepository;
  
     @Override
-    public UserAccount createAccount(String username, String password,boolean superUser) {
-        UserAccount User = new UserAccount(username, password, superUser);
+    public UserAccount createAccount(String username, String password,String email,boolean superUser) {
+        UserAccount User = new UserAccount(username, password, email, superUser);
         return userRepository.save(User); 
     }
 

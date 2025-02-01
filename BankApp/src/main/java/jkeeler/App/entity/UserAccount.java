@@ -13,30 +13,34 @@ public class UserAccount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId = 0;
+    private Long userId = 0L;
     @Column(name = "Username")
     private String username = "";
     @Column(name = "Password")
     private String password = "";
+    @Column(name = "Email")
+    private String email = "";
     @Column(name = "SuperUser")
     private boolean superUser = false;
 
     public UserAccount(){
         super();
     }
-    public UserAccount(String username, String password){
+    public UserAccount(String username, String password, String email){
         this.username = username;
         this.password = password;
+        this.email = email;
     }
-    public UserAccount(String username, String password, boolean SuperUser){
+    public UserAccount(String username, String password,String email, boolean superUser){
         this.username = username;
         this.password = password;
-        this.superUser = SuperUser;
+        this.email = email;
+        this.superUser = superUser;
     }
-    public int getUserId(){
+    public Long getUserId(){
         return this.userId;
     }
-    public void setUserId(int userId){
+    public void setUserId(Long userId){
 
         this.userId =userId;
     }

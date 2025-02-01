@@ -13,13 +13,16 @@ public class BankAccountServiceImpl implements BankAccountService {
     private BankAccountRepository bankAccountRepository;
 
     @Override
-    public BankAccount findByUserId(int userId) {
+    public BankAccount findByUserId(Long userId) {
         return bankAccountRepository.findByUserId(userId);
     }
 
     @Override
     public BankAccount createAccount(UserAccount user) {
-        BankAccount bank = new BankAccount(0, user.getUserId());
-        return (BankAccount) bankAccountRepository.save(bank); 
+        if (user == null) {
+            throw new IllegalArgumentException("User cannot be null");
+        }
+        BankAccount bank = new BankAccount(0.0, user.getUserId());
+        return bankAccountRepository.save(bank);
     }
 }

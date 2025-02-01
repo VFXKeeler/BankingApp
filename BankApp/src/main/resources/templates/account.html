@@ -14,14 +14,13 @@
         <div class="user-details">
             <h2>User Details</h2>
             <p><strong>Username:</strong> [[${userAccount.username}]]</p>
-            <p><strong>Email:</strong> [[${userAccount.email}]]</p>
+            <p><strong>ID:</strong> [[${userAccount.userId}]]</p>
         </div>
 
         <!-- Bank Account Section -->
         <div class="bank-account">
             <h2>Bank Account Details</h2>
-            <p><strong>Account Number:</strong> [[${bankAccount.accountNumber}]]</p>
-            <p><strong>Balance:</strong> [[${bankAccount.balance}]]</p>
+            <p><strong>Bank Account ID:</strong> [[${bankAccount.userId}]]</p>
         </div>
 
         <!-- Transactions Section -->
@@ -38,7 +37,7 @@
                 </thead>
                 <tbody>
                     <tr th:if="${transactions == null or #list.isEmpty(transactions)}">
-                        <td colspan="4"> No Transaction Available</td>
+                        <td colspan="4">No Transaction Available</td>
                     </tr>
                     <tr th:each="transaction : ${transactions}">
                         <td th:text="${transaction.id}"></td>
