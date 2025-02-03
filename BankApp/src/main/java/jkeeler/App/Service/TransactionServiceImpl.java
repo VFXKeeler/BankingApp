@@ -13,7 +13,7 @@ public class TransactionServiceImpl implements TransactionService {
     private TransactionRepository transactionRepository;
 
     @Override
-    public List<Transaction> findByBankId(int bankId) {
+    public List<Transaction> findByBankId(Long bankId) {
         return transactionRepository.findByBankId(bankId);
     }
 

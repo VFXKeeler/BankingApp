@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function setFormAction(action) {
+                document.getElementById("createAccountForm").action = action;
+            }
+        </script>
+    </head>
+    <body>
+        <a href="home" class="back-button">Back</a>
+        <form id="createAccountForm" method="post">
+            <h1>Create Account</h1>
+            <div class="textBoxdiv">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="textBoxdiv">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="textBoxdiv">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <input type="submit" value="Create Account" class="loginBtn" onclick="setFormAction('/createUser')">
+            <input type="submit" value="(Dev)Create Account With Data(Dev)" class="loginBtn" onclick="setFormAction('/createUserWithData')">
+        </form>
+    </body>
+</html>

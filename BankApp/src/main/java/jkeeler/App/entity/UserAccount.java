@@ -1,11 +1,6 @@
 package jkeeler.App.Entity;
 
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "UserAccount")
@@ -62,5 +57,11 @@ public class UserAccount {
     public void setSuperUser(boolean superUser){
         this.superUser = superUser;
     }
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

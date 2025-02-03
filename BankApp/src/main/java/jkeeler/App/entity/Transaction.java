@@ -1,11 +1,6 @@
 package jkeeler.App.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Transaction")
@@ -17,13 +12,13 @@ public class Transaction {
     private String date = "";
     @Column(name = "Amount")
     private double amount = 0;
-    @Column(name = "BankId")
-    private int bankId = 0;
+    @Column(name = "bankAccountId")
+    private Long bankId = 0L;
 
     public Transaction(){
         super();
     }
-    public Transaction(double amount, int bankId){
+    public Transaction(double amount, Long bankId){
         this.amount = amount;
         this.bankId = bankId;
     }
@@ -47,10 +42,10 @@ public class Transaction {
     public void setAmount(double amount){
         this.amount = amount;
     }
-    public int getBankId(){
+    public Long getBankId(){
         return bankId;
     }
-    public void setBankId(int bankId){
+    public void setBankId(Long bankId){
         this.bankId = bankId;
     }
 

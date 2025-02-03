@@ -4,6 +4,13 @@
             "type": "java",
             "name": "BankingSpringApp",
             "request": "launch",
+            "mainClass": "jkeeler.App.BankingSpringApp",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "BankingSpringApp",
+            "request": "launch",
             "mainClass": "Test.BankingSpringApp",
             "projectName": "demo"
         },

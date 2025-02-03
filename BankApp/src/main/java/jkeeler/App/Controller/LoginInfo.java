@@ -3,11 +3,13 @@ package jkeeler.App.Controller;
 public class LoginInfo {
     private String username;
     private String password;
+    private String email;
 
     // Constructor, getters, and setters
-    public LoginInfo(String username, String password) {
+    public LoginInfo(String username, String email, String password) {
         this.username = username;
         this.password = password;
+        this.email = email;
     }
 
     public String getUsername() {
@@ -24,5 +26,12 @@ public class LoginInfo {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

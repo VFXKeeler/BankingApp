@@ -1,6 +1,8 @@
 package jkeeler.App.Entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+
+
 
 @Entity
 @Table(name = "bankaccount")

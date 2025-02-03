@@ -13,7 +13,7 @@ import jkeeler.App.Entity.UserAccount;
 import jkeeler.App.Entity.BankAccount;
 
 
-import jkeeler.App.Service.TransactionService;
+import jkeeler.App.Service.TransactionServiceImpl;
 import jkeeler.App.Service.UserAccountService;
 import jkeeler.App.Service.BankAccountService;
 
@@ -27,7 +27,7 @@ public class AccountController {
     private UserAccountService userAccountService;
     
     @Autowired
-    private TransactionService transactionService;
+    private TransactionServiceImpl transactionService;
 
     @Autowired
     private BankAccountService bankAccountService;
@@ -38,19 +38,14 @@ public class AccountController {
         String username = loginInfo.getUsername(); 
         // Fetch user details and transactions
         UserAccount userAccount = userAccountService.findByUsername(username);
-        //List<Transaction> transactions = transactionService.findByBankId(bankId);
-        BankAccount bankAccount = bankAccountService.findByUserId(userAccount.getUserId());
-
-        // Create a bank account if it doesn't exist
-        if (bankAccount == null) {
-            System.out.println("Bank account is null for userId: " + userAccount.getUserId());
-            bankAccount = bankAccountService.createAccount(userAccount);
-        }
         
+        BankAccount bankAccount = bankAccountService.findByUserId(userAccount.getUserId());
+        
+
+        List<Transaction> transactions = transactionService.findByBankId(bankAccount.getBankAccountId());
         // Add details to the model
         model.addAttribute("userAccount", userAccount);
-
-       // model.addAttribute("transactions", transactions);
+        model.addAttribute("transactions", transactions);
         model.addAttribute("bankAccount", bankAccount);
 
         return "account";

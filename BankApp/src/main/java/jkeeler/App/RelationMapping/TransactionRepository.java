@@ -7,5 +7,5 @@ import jkeeler.App.Entity.Transaction;
 import java.util.List;
 
 public interface TransactionRepository<T, Long> extends JpaRepository<Transaction, Long> {
-    List<Transaction> findByBankId(int BankId);
+    List<Transaction> findByBankId(Long BankId);
 }
